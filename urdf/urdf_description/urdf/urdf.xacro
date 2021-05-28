@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<robot name="URDF" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find URDF_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find URDF_description)/urdf/URDF.trans" />
+<xacro:include filename="$(find URDF_description)/urdf/URDF.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.04399972708843416 -2.273993375034959e-05 0.04985727208510481"/>
+    <mass value="0.1540024891502755"/>
+    <inertia ixx="0.000276" ixy="0.0" ixz="0.0" iyy="0.000289" iyz="-0.0" izz="0.000287"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://URDF_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://URDF_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
