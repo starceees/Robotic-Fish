@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="hopefully thisworks fish v2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.125203473280545 -0.00779996766699792 -0.00802231379135293"
+        rpy="0 0 0" />
+      <mass
+        value="0.0196204376102782" />
+      <inertia
+        ixx="3.59966739578019E-05"
+        ixy="8.11632932104091E-07"
+        ixz="5.83876529936867E-09"
+        iyy="3.59987920309121E-05"
+        iyz="-5.80962405137059E-09"
+        izz="3.65724177523004E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="connector_1">
+    <inertial>
+      <origin
+        xyz="0.05 0.00500000000000001 0.00155195729165713"
+        rpy="0 0 0" />
+      <mass
+        value="0.00305287300435992" />
+      <inertia
+        ixx="2.78483441281945E-08"
+        ixy="-1.19114008207636E-21"
+        ixz="7.27341332691048E-22"
+        iyy="2.50284834412819E-06"
+        iyz="2.56379775594361E-23"
+        izz="2.52518214750002E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/connector_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/connector_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="fixed">
+    <origin
+      xyz="0.061373 -0.0080688 -0.014644"
+      rpy="-1.5708 -0.78792 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="connector_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="servo_1">
+    <inertial>
+      <origin
+        xyz="-0.013693860209656 -2.50027359927074E-11 -0.00580926753613032"
+        rpy="0 0 0" />
+      <mass
+        value="0.00246084368768117" />
+      <inertia
+        ixx="5.69891366202012E-08"
+        ixy="1.65584406215934E-16"
+        ixz="3.89171849153135E-08"
+        iyy="2.57326502159184E-07"
+        iyz="-1.03924771860733E-16"
+        izz="2.36160009955788E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/servo_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/servo_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1.1"
+    type="revolute">
+    <origin
+      xyz="0.05 0.005 0"
+      rpy="-3.1416 0 1.5607" />
+    <parent
+      link="connector_1" />
+    <child
+      link="servo_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="steady_1">
+    <inertial>
+      <origin
+        xyz="0.0334067277857967 -1.17929041532072E-10 0.00499999999999999"
+        rpy="0 0 0" />
+      <mass
+        value="0.0103744467859455" />
+      <inertia
+        ixx="2.89871689022429E-07"
+        ixy="-3.53011787055752E-15"
+        ixz="1.37149715500802E-16"
+        iyy="4.27522010065487E-06"
+        iyz="1.37148606677955E-16"
+        izz="4.36764065063871E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/steady_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/steady_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1.2"
+    type="fixed">
+    <origin
+      xyz="-0.022 0 -0.006"
+      rpy="0 0 3.104" />
+    <parent
+      link="servo_1" />
+    <child
+      link="steady_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="steady_2">
+    <inertial>
+      <origin
+        xyz="-0.0448802622505794 -1.28662802634238E-09 0.00254676754314769"
+        rpy="0 0 0" />
+      <mass
+        value="0.0166819474196233" />
+      <inertia
+        ixx="1.14475822991125E-06"
+        ixy="-9.673528044829E-13"
+        ixz="-1.00630731023684E-06"
+        iyy="1.21234226551939E-05"
+        iyz="-2.5844986140473E-13"
+        izz="1.14416358636467E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/steady_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/steady_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1.3"
+    type="continuous">
+    <origin
+      xyz="0.06 0 0"
+      rpy="0 0 3.0242" />
+    <parent
+      link="steady_1" />
+    <child
+      link="steady_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="tail_3">
+    <inertial>
+      <origin
+        xyz="-0.120004628501566 0.0050021702331802 0.0391635973064341"
+        rpy="0 0 0" />
+      <mass
+        value="0.00536820351792088" />
+      <inertia
+        ixx="1.43674184108516E-06"
+        ixy="-3.53543510138389E-10"
+        ixz="4.38939642175212E-09"
+        iyy="2.21081962787072E-06"
+        iyz="6.24440825488109E-10"
+        izz="1.60124130468359E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/tail_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/tail_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1.4"
+    type="fixed">
+    <origin
+      xyz="0.069987 -0.0049819 -0.040155"
+      rpy="0 0.023559 0" />
+    <parent
+      link="steady_2" />
+    <child
+      link="tail_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="connector_2">
+    <inertial>
+      <origin
+        xyz="0.05 0.00500000000000003 0.00155195729165716"
+        rpy="0 0 0" />
+      <mass
+        value="0.00305287300435992" />
+      <inertia
+        ixx="2.78483441281947E-08"
+        ixy="-8.32143696228346E-22"
+        ixz="-6.6324134462194E-22"
+        iyy="2.50284834412819E-06"
+        iyz="1.75653721347039E-23"
+        izz="2.52518214750002E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/connector_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/connector_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="fixed">
+    <origin
+      xyz="0.067006 0.026531 -0.020394"
+      rpy="1.5708 -0.78792 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="connector_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="servo_2">
+    <inertial>
+      <origin
+        xyz="-0.0118131414189454 -1.38777878078145E-17 0.00767775716030974"
+        rpy="0 0 0" />
+      <mass
+        value="0.00246693523902608" />
+      <inertia
+        ixx="6.43894942208545E-08"
+        ixy="-4.30133918527574E-23"
+        ixz="5.72591975724223E-08"
+        iyy="2.56245730082838E-07"
+        iyz="1.98523347012727E-23"
+        izz="2.27770984163872E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/servo_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/servo_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2.1"
+    type="continuous">
+    <origin
+      xyz="0.05 0.00500000000000001 0.00300000000000001"
+      rpy="0 0 -1.53820768889135" />
+    <parent
+      link="connector_2" />
+    <child
+      link="servo_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="moving_1">
+    <inertial>
+      <origin
+        xyz="0.021456749179824 -4.56032447915256E-10 0.00750000000436203"
+        rpy="0 0 0" />
+      <mass
+        value="0.00724409720885451" />
+      <inertia
+        ixx="4.37850916510125E-07"
+        ixy="7.28952823888663E-14"
+        ixz="4.60319947060294E-17"
+        iyy="1.34271595915222E-06"
+        iyz="3.18754782535109E-23"
+        izz="1.64187968373942E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/moving_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/moving_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2.2"
+    type="continuous">
+    <origin
+      xyz="-0.0200000002980232 0 0.0056"
+      rpy="0 0 3.07304929265764" />
+    <parent
+      link="servo_2" />
+    <child
+      link="moving_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="tail_1">
+    <inertial>
+      <origin
+        xyz="-0.022395187625058 0.0050011958859327 0.029350988633871"
+        rpy="0 0 0" />
+      <mass
+        value="0.0117752099756717" />
+      <inertia
+        ixx="1.9094699028907E-05"
+        ixy="-5.28017168082019E-11"
+        ixz="3.93695818070142E-07"
+        iyy="1.35231941050437E-05"
+        iyz="1.09204605200128E-09"
+        izz="9.88191089410182E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/tail_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/tail_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2.3"
+    type="fixed">
+    <origin
+      xyz="-0.00975689675517924 0.00495781561554423 -0.0158136676755105"
+      rpy="0 0.0104980440135906 3.14159265358979" />
+    <parent
+      link="moving_1" />
+    <child
+      link="tail_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="moving_2">
+    <inertial>
+      <origin
+        xyz="-0.0199999928867684 5.54207833791676E-09 0.00734028222954751"
+        rpy="0 0 0" />
+      <mass
+        value="0.00601886955859844" />
+      <inertia
+        ixx="3.22907058739065E-07"
+        ixy="-6.17781075379856E-13"
+        ixz="1.79702881428037E-13"
+        iyy="7.00270800352352E-07"
+        iyz="1.92276629067074E-09"
+        izz="7.37764865080193E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/moving_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/moving_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2.4"
+    type="continuous">
+    <origin
+      xyz="0.0399936959790062 0 0"
+      rpy="0 0 3.07164859180379" />
+    <parent
+      link="moving_1" />
+    <child
+      link="moving_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="tail_2">
+    <inertial>
+      <origin
+        xyz="-0.071407713333955 0.00498448213206946 0.036499494559393"
+        rpy="0 0 0" />
+      <mass
+        value="0.00534884135305422" />
+      <inertia
+        ixx="4.16347983280319E-06"
+        ixy="8.61750534895231E-11"
+        ixz="4.1790089108984E-08"
+        iyy="3.01625209809896E-06"
+        iyz="6.56090101298633E-10"
+        izz="1.94813548803003E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/tail_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/tail_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2.5"
+    type="fixed">
+    <origin
+      xyz="0.052500764623677 -0.00551433625547805 -0.0159972805836121"
+      rpy="0 -3.75122854235347E-05 0" />
+    <parent
+      link="moving_2" />
+    <child
+      link="tail_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="moving_3">
+    <inertial>
+      <origin
+        xyz="-0.0157566899193941 -4.27012591952547E-12 0.00750000001081054"
+        rpy="0 0 0" />
+      <mass
+        value="0.00710446614965053" />
+      <inertia
+        ixx="1.99938718022422E-07"
+        ixy="-1.51098561248555E-16"
+        ixz="-1.17012457595896E-15"
+        iyy="1.37890860024361E-06"
+        iyz="-4.43801338512288E-17"
+        izz="1.43589585712564E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/moving_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hopefully thisworks fish v2/meshes/moving_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2.6"
+    type="continuous">
+    <origin
+      xyz="-0.04 0 0"
+      rpy="0 0 -0.0239424032322407" />
+    <parent
+      link="moving_2" />
+    <child
+      link="moving_3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
